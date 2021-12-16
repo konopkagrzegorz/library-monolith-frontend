@@ -1,6 +1,23 @@
 import { DataGrid } from "@mui/x-data-grid";
 import { useDemoData } from "@mui/x-data-grid-generator";
 import { useEffect, useState } from "react";
+import { Button } from "@mui/material";
+
+
+const renderDetailsButton = (params) => {
+  return (
+      <strong>
+          <Button
+              variant="contained"
+              color="primary"
+              size="small"
+              style={{ marginLeft: 16 }}
+          >
+              More Info
+          </Button>
+      </strong>
+  )
+}
 
 const columns = [
   {
@@ -11,14 +28,12 @@ const columns = [
   {
     field: "title",
     headerName: "Title",
-    type: "text",
     width: 600,
   },
   {
     field: "author",
     headerName: "Author",
     width: 180,
-    type: "text",
   },
   {
     field: "quantity",
@@ -26,7 +41,17 @@ const columns = [
     width: 150,
     type: "number",
   },
+  {
+    field: 'details',
+    headerName: 'Details',
+    type: "text",
+    width: 150,
+    renderCell: renderDetailsButton,
+    disableClickEventBubbling: true,
+},
 ];
+
+
 
 export default function BooksList() {
     
@@ -41,7 +66,7 @@ export default function BooksList() {
   return (
     <div style={{
         height: 400,
-        width: "60%",
+        width: "65%",
         marginLeft: "auto",
         marginRight: "auto",
         marginTop: "30px"
