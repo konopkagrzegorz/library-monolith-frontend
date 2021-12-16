@@ -10,23 +10,22 @@ import { NavLink } from "react-router-dom";
 function Header() {
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" color='success'>
+      <AppBar position="static" color="success">
         <Toolbar>
-          <IconButton
+          <NavLink to="/"><IconButton
             size="large"
             edge="start"
-            color="inherit"
+            color="info"
             aria-label="menu"
             sx={{ mr: 2 }}
           >
             <ArticleIcon />
-          </IconButton>
+          </IconButton></NavLink>
           <Typography variant="h5" component="div" sx={{ flexGrow: 1 }}>
             Library Monolith
           </Typography>
-          <Button color="inherit">Users</Button>
-          <Button color="inherit">Books</Button>
-          <Button color="inherit">Login</Button>
+         <Button color="inherit" component={NavLink} to="/users">Users</Button>
+         <Button color="inherit" component={NavLink} to="/books">Books</Button>
         </Toolbar>
       </AppBar>
     </Box>
