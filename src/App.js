@@ -5,6 +5,7 @@ import UserDetails from "./components/UserDetails";
 import {Routes, Route} from "react-router-dom";
 import { HomeContent } from "./components/HomeContent";
 import BooksList from "./components/BooksList";
+import BookDetails from "./components/BookDetails";
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <Route exact path="/users" element={<UsersList/>}></Route>
           <Route exact path="/books" element={<BooksList/>}></Route>
           <Route path="/users/:id" element={<UserDetails/>}></Route>
+          <Route path="/books/:id" element={<BookDetails/>}></Route>
       </Routes>
     </>
   );

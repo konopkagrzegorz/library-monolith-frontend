@@ -1,22 +1,18 @@
 import { DataGrid } from "@mui/x-data-grid";
-import { useDemoData } from "@mui/x-data-grid-generator";
 import { useEffect, useState } from "react";
 import { Button } from "@mui/material";
+import { Link } from "@mui/material";
 
 
 const renderDetailsButton = (params) => {
   return (
-      <strong>
-          <Button
+    <Link href={`/books/${params.id}`}><Button
               variant="contained"
               color="primary"
               size="small"
-              style={{ marginLeft: 16 }}
-          >
-              More Info
-          </Button>
-      </strong>
+              style={{ marginLeft: 16 }}>More Info</Button></Link>
   )
+
 }
 
 const columns = [
