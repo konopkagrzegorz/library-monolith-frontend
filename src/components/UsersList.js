@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Grid } from "@mui/material";
 import User from "./User";
+import AddNewUserForm from "./forms/AddNewUserForm";
 
 function UsersList() {
   const [users, setUsers] = useState([]);
@@ -29,6 +30,7 @@ function UsersList() {
         style={{marginBottom: "20px"}}>
         <User key={user.id} user={user}></User></Grid>;
       })}
+      <AddNewUserForm/>
     </Grid>
   );
 }
