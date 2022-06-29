@@ -21,7 +21,7 @@ function UserForm({ onAdd }) {
             roles: []
         },
         onSubmit: (values) => {
-            fetch("http://localhost:8080/users", {
+            fetch("https://library-monolith-backend.herokuapp.com/users", {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(values)

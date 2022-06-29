@@ -54,7 +54,7 @@ export default function BooksList() {
   const [books, setBooks] = useState([]);
 
   useEffect(() => {
-      fetch("http://localhost:8080/books")
+      fetch("https://library-monolith-backend.herokuapp.com/books")
       .then(response => response.json())
       .then(data => setBooks(data));
   }, []);

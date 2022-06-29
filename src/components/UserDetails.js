@@ -11,7 +11,7 @@ function UserDetails() {
   const params = useParams();
 
   useEffect(() => {
-    fetch(`http://localhost:8080/users/${params.id}`)
+    fetch(`https://library-monolith-backend.herokuapp.com/users/${params.id}`)
       .then((response) => response.json())
       .then((data) => setUser(data));
 

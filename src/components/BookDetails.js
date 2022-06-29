@@ -10,7 +10,7 @@ function BookDetails() {
     const params = useParams();
 
     useEffect(() => {
-        fetch(`http://localhost:8080/books/${params.id}`)
+        fetch(`https://library-monolith-backend.herokuapp.com/books/${params.id}`)
           .then((response) => response.json())
           .then((data) => setBook(data));
       }, [params.id]);

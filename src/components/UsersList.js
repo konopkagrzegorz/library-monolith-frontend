@@ -7,7 +7,7 @@ function UsersList() {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8080/users")
+    fetch("https://library-monolith-backend.herokuapp.com/users")
       .then((response) => response.json())
       .then((data) => setUsers(data));
   }, []);
